@@ -11,22 +11,27 @@
 
     <ImageView
         android:id="@+id/img"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:src="@drawable/ic_gmail"
+        android:layout_width="wrap_content"
+        android:layout_height="56dp"
+        android:layout_marginTop="12dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/ic_achievement"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
 
     <TextView
         android:id="@+id/tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="12dp"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/img"
-        tools:text="s;dl,of[odsk[fo" />
+        tools:text="Achievement" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
