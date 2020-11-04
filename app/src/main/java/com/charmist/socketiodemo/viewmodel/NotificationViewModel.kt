@@ -11,8 +11,16 @@ class NotificationViewModel : ViewModel() {
     val connectSocketIO: LiveData<Boolean>
         get() = _connectSocketIO
 
+    private var notificationBadge = 0
+    val counterNotification = MutableLiveData<Int>()
+
     fun connectSocketIO() {
         _connectSocketIO.postValue(true)
+    }
+
+    fun countNotification() {
+        notificationBadge++
+        counterNotification.postValue(notificationBadge)
     }
 
 }

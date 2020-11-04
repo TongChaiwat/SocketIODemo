@@ -24,7 +24,6 @@ class NotificationFragment : BaseFragment() {
             null
         }
     }
-    private var count = 0
 
     companion object {
         const val TAG = "NotificationFragment"
@@ -56,13 +55,13 @@ class NotificationFragment : BaseFragment() {
             socket?.on(SOCKET_EVENT_NAME, onNewNotification)
             socket?.connect()
         })
+        viewModel?.counterNotification?.observe(viewLifecycleOwner, {
+            cart_badge.text = it.toString()
+        })
     }
 
     private val onNewNotification = Emitter.Listener {
-        activity?.runOnUiThread {
-            count++
-            cart_badge.text = count.toString()
-        }
+        viewModel?.countNotification()
     }
 
     private val onConnect = Emitter.Listener { Log.d(TAG, "connected") }
