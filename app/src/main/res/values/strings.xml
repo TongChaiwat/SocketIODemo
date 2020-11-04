@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">SocketIODemo</string>
+    <string name="main_menu_home">Home</string>
+    <string name="main_menu_blank">Blank</string>
+    <string name="main_menu_achievement">Achievement</string>
+    <string name="main_menu_notification">Notification</string>
+</resources>
